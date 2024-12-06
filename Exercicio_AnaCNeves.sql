@@ -13,7 +13,7 @@ INSERT INTO alunos VALUES (2, 'Joana', 'F');
 
 
 -- consultando as injeções realizadas
-SELECT * FROM alunos WHERE matricula=1
+SELECT * FROM alunos WHERE matricula=1,
 
 -- ATIVIDADE: Crie uma nova tabela chamada 'professores', com a mesma quantidade de características de 'alunos',
 -- fazendo ao menos duas injeções de dados e uma consulta.
@@ -44,15 +44,15 @@ ADD email_contato VARCHAR (50);
 -- que todas precisam estar relacionadas.
 
 CREATE TABLE disciplinas (
-    codigo_disciplina INTEGER PRIMARY KEY
-    matricula INT
-    matricula_prof INT
-    nome_disciplina TEXT NOT NULL
-    horário_disciplina TEXT NOT NULL
-    dias_disciplina TEXT NOT NULL
-    data_inicio TEXT NOT NULL
-    data_fim TEXT NOT NULL
-    horas_disciplina INT
+    codigo_disciplina INTEGER PRIMARY KEY,
+    matricula INT,
+    matricula_prof INT,
+    nome_disciplina TEXT NOT NULL,
+    horário_disciplina TEXT NOT NULL,
+    dias_disciplina TEXT NOT NULL,
+    data_inicio TEXT NOT NULL,
+    data_fim TEXT NOT NULL,
+    horas_disciplina INT,
         CONSTRAINT fk_professores
     	FOREIGN KEY (professores)
     	REFERENCES professores(matricula_prof)
